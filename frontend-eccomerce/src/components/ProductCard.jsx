@@ -43,10 +43,10 @@ const styles = {
   image: {
     width: '100%',
     height: 'auto',
-    borderRadius: '8px',
+    borderRadius: '4px',
   },
   info: {
-    paddingTop: '10px',
+    paddingTop: '3px',
     textAlign: 'left',
   },
   category: {
@@ -68,7 +68,7 @@ const styles = {
   price: {
     textDecoration: 'line-through',
     color: 'gray',
-    fontSize: '14px',
+    fontSize: '16px',
   },
   priceDiscount: {
     color: 'black',

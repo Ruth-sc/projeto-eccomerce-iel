@@ -21,10 +21,9 @@ const ProductListing = ({ products }) => {
 const styles = {
   listing: {
     display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+    gridTemplateColumns: 'repeat(4, 1fr)',
     gap: '16px',
     padding: '16px',
-
   }
 };
 

@@ -26,5 +26,7 @@ const styles = {
     padding: '16px',
   }
 };
+ 
+
 
 export default ProductListing;

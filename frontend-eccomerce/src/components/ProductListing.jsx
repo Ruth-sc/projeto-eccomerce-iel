@@ -22,8 +22,12 @@ const styles = {
   listing: {
     display: 'grid',
     gridTemplateColumns: 'repeat(4, 1fr)',
-    gap: '16px',
-    padding: '16px',
+    gap: '1%',
+    paddingBottom: '80px',
+    paddingTop: '80px',
+    paddingLeft: '50px',
+    paddingRight: '50px'
+
   }
 };
  

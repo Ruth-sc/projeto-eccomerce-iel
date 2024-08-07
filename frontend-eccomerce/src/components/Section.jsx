@@ -1,48 +1,26 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import '../css/Section.css'; // Adicione um arquivo CSS para estilização
 
-
-const Section = ({ title, titleAlign = 'left', link, children }) => {
+const Section = ({ title, titleAlign = 'left', discount, buttonText, children }) => {
   return (
-    <div style={styles.sectionContainer}>
-      <div style={{ ...styles.titleContainer, justifyContent: titleAlign === 'center' ? 'center' : 'flex-start' }}>
-        <h2 style={styles.title}>{title}</h2>
-        {link && <a href={link.href} style={styles.link}>{link.text}</a>}
-      </div>
-      <div style={styles.childrenContainer}>
+    <div className="section-container">
+      {discount && <div className="discount-badge">{discount}</div>}
+      <div className="content-container">
+        <h2 className="title">{title}</h2>
         {children}
+        {buttonText && <button className="action-button">{buttonText}</button>}
       </div>
     </div>
   );
 };
 
-const styles = {
-  sectionContainer: {
-    padding: '20px',
-    border: '1px dashed gray',
-    margin: '10px 0'
-  },
-  titleContainer: {
-    display: 'flex',
-    alignItems: 'center',
-    marginBottom: '20px',
-    position: 'relative'
-  },
-  title: {
-    color: 'darkgray',
-    fontSize: '24px',
-    margin: 0
-  },
-  link: {
-    color: 'blue',
-    fontSize: '18px',
-    textDecoration: 'none',
-    marginLeft: 'auto',
-    position: 'absolute',
-    right: 0
-  },
-  childrenContainer: {
-    marginTop: '20px'
-  }
+Section.propTypes = {
+  title: PropTypes.string.isRequired,
+  titleAlign: PropTypes.oneOf(['left', 'center']),
+  discount: PropTypes.string,
+  buttonText: PropTypes.string,
+  children: PropTypes.node.isRequired,
 };
 
 export default Section;
-

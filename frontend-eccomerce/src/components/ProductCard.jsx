@@ -19,22 +19,24 @@ const ProductCard = ({ image, name, price, priceDiscount, discount }) => {
 
 const styles = {
   card: {
-    border: '1px solid #eee',
-    borderRadius: '8px',
-    padding: '13px',
+    border: '1px solid #fff',
+    borderRadius: '4px',
+    padding: '10px',
     textAlign: 'center',
-    maxWidth: '200px',
+    maxWidth: '260px',
     margin: 'auto',
     position: 'relative',
     backgroundColor: '#fff',
-    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+    gap: '0%',
+    width: '260px'
+   
   },
   discountBadge: {
     position: 'absolute',
-    top: '8px',
-    left: '8px',
-    backgroundColor: '#d4f4dd',
-    color: '#00a650',
+    top: '18px',
+    left: '15px',
+    backgroundColor: '#a2fa2f',
+    color:'#333' ,
     padding: '4px 8px',
     borderRadius: '4px',
     fontSize: '12px',

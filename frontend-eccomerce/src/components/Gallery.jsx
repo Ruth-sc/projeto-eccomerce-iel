@@ -18,6 +18,12 @@ const Gallery = ({ className, width, height, images, }) => {
   };
 
   
+  const imageList = [
+    { "src": "/images/home-slide-1.jpeg" },
+    { "src": "/images/home-slide-2.jpeg" },
+    { "src": "/images/home-slide-3.jpeg" },
+    { "src": "/images/home-slide-4.jpeg" },
+  ]
  
 
   return (

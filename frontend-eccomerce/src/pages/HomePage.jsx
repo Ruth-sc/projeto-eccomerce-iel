@@ -8,29 +8,37 @@ import "../css/Gallery.css"
 
 function HomePage  ()  {
   return (
-  <><><Gallery className="gallery-image" width="1440px" height="681px" images={imageList} />
+  <><Gallery className="gallery-image" width="1335px" height="600px" images={imageList} />
 
+  
+<div>
+      <Section title="Coleções em destaque">
+        <div className="card">
+          <div className="discount-badge">30% OFF</div>
+          <img src="/images/collection-1.png" alt="" />
+          <a href="#" className="action-button">Comprar</a>
+        </div>
 
-      <div className="flex-container">
-        <Section title="" discount="30% OFF" buttonText="Comprar">
-          <div className="image-container">
-            <img src="/images/collection-1.png" alt="" />
-          </div>
-        </Section>
+        <div className="card">
+          <div className="discount-badge">30% OFF</div>
+          <img src="/images/collection-2.png" alt="" />
+          <a href="#" className="action-button">Comprar</a>
+        </div>
 
-        <Section title="" discount="30% OFF" buttonText="Comprar">
-          <div className="image-container">
-            <img src="/images/collection-2.png" alt="" />
-          </div>
-        </Section>
-
-        <Section title="" discount="30% OFF" buttonText="Comprar">
-          <div className="image-container">
-            <img src="/images/collection-3.png" alt="" />
-          </div>
-        </Section>
-      </div>
-      </><div><ProductListing products={products} /></div></>
+        <div className="card">
+          <div className="discount-badge">30% OFF</div>
+          <img src="/images/collection-3.png" alt="" />
+          <a href="#" className="action-button">Comprar</a>
+          
+        </div>
+      </Section>
+    </div>
+    <Section title="Produtos em alta" titleAlign="left">
+      <div><ProductListing products={products} /></div>
+       </Section>
+  
+  
+</>
     ) }
 
 
@@ -47,7 +55,8 @@ const products = [
       name: 'Adidas Run - Feminino',
       price: 'R$ 250,00',
       priceDiscount: 'R$ 150,00',
-      discount: '40% OFF',
+      discount: '40% OFF'
+      
     },
     {
       image: "/images/produc-image-5.jpeg",
@@ -95,10 +104,12 @@ const products = [
   ];
 
   const imageList = [
-    { "src": "/images/home-slide-1.jpeg" },
-    { "src": "/images/home-slide-2.jpeg" },
-    { "src": "/images/home-slide-3.jpeg" },
-    { "src": "/images/home-slide-4.jpeg" },
+    { src: "/images/home-slide-5.jpeg" },
+    { src: "/images/home-slide-2.jpeg" },
+    { src: "/images/home-slide-8.jpeg" },
+    { src: "/images/home-slide-4.jpeg" },
   ]
+
+  
 
 export default HomePage

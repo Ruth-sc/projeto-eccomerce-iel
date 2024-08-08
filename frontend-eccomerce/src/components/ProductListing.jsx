@@ -23,8 +23,8 @@ const styles = {
     display: 'grid',
     gridTemplateColumns: 'repeat(4, 1fr)',
     gap: '1%',
-    paddingBottom: '80px',
-    paddingTop: '80px',
+    paddingBottom: '90px',
+    paddingTop: '10px',
     paddingLeft: '50px',
     paddingRight: '50px'
 

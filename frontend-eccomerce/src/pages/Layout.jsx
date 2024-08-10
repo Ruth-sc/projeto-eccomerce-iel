@@ -1,16 +1,17 @@
-import Footer from "../components/Footer";
-import Header from "../components/Header";
-import React from "react";
+import React from 'react';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import { Outlet } from 'react-router-dom'; 
+/* Utilizar Outlet ao invés de uma prop children é uma boa prática */
 
-
-const Layout = ({ children }) => {
-    return ( 
-        <div>
-            <Header/>
-            {children}
-            <Footer/>
-        </div>
-     );
+const Layout = () => {
+  return (
+    <div>
+      <Header />
+        <Outlet />  {/* Aqui será renderizado o conteúdo das rotas internas */}
+      <Footer />
+    </div>
+  );
 };
- 
+
 export default Layout;

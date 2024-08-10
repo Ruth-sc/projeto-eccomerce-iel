@@ -1,16 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../css/Section.css'; // Adicione um arquivo CSS para estilização
+import '../css/Section.css'; 
 
-const Section = ({ title, titleAlign = (['center' ,'left']), discount, buttonText, children }) => {
+const Section = ({ title, titleAlign = 'left', children }) => {
   return (
     <div className="section-wrapper">
-      <h1 className="main-title">{title}</h1> {/* Título centralizado */}
+      <h1 className="main-title" style={{ textAlign: titleAlign }}>{title}</h1>
       <div className="section-container">
-        <div className="content-container">
-          {children}
-          {buttonText && <button className="action-button">{buttonText}</button>}
-        </div>
+        {children}
       </div>
     </div>
   );
@@ -19,8 +16,6 @@ const Section = ({ title, titleAlign = (['center' ,'left']), discount, buttonTex
 Section.propTypes = {
   title: PropTypes.string.isRequired,
   titleAlign: PropTypes.oneOf(['left', 'center']),
-  discount: PropTypes.string,
-  buttonText: PropTypes.string,
   children: PropTypes.node.isRequired,
 };
 

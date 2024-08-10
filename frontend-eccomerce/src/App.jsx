@@ -1,4 +1,3 @@
-import 'primeicons/primeicons.css';
 import Paths from './routes/Paths'
         
 const App = () => {

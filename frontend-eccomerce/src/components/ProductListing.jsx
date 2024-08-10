@@ -1,36 +1,22 @@
-
+import React from 'react';
 import ProductCard from './ProductCard';
+import '../css/ProductListing.css';
 
 const ProductListing = ({ products }) => {
   return (
-    <div style={styles.listing}>
+    <div className="product-listing">
       {products.map((product, index) => (
-        <ProductCard 
+        <ProductCard
           key={index}
           image={product.image}
           name={product.name}
+          typeProduct={product.typeProduct}
           price={product.price}
           priceDiscount={product.priceDiscount}
-          discount={product.discount}
         />
       ))}
     </div>
   );
 };
-
-const styles = {
-  listing: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(4, 1fr)',
-    gap: '1%',
-    paddingBottom: '90px',
-    paddingTop: '10px',
-    paddingLeft: '50px',
-    paddingRight: '50px'
-
-  }
-};
- 
-
 
 export default ProductListing;

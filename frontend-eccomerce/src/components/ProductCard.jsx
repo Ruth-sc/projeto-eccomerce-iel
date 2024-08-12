@@ -1,11 +1,26 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../css/ProductCard.css';
 
 const ProductCard = ({ image, name, typeProduct, price, priceDiscount }) => {
-  const originalPrice = (price / (1 - priceDiscount / 100)).toFixed(2); // Calcula o preço original antes do desconto
+  const navigate = useNavigate();
+
+  const handleCardClick = () => {
+    navigate('/product-view', {
+      state: {
+        image,
+        name,
+        typeProduct,
+        price,
+        priceDiscount,
+      },
+    });
+  };
+
+  const originalPrice = (price / (1 - priceDiscount / 100)).toFixed(2);
 
   return (
-    <div className="product-card">
+    <div className="product-card" onClick={handleCardClick} style={{ cursor: 'pointer' }}>
       <div className="discount-badge">
         {priceDiscount}% OFF
       </div>

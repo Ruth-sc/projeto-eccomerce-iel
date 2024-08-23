@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import Gallery from '../components/Gallery';
-import BuyBox from '../components/BuyBox';
+import BuyBox from '../components/Buybox';
 import ProductOptions from '../components/ProductOptions';
 import Section from '../components/Section';
 import ProductListing from '../components/ProductListing';
